@@ -4,12 +4,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default function Grid(props) {
-    const {children} = props
+    const {children, header} = props
   return (
     <Container fluid>
     <Row>
       <Col></Col>
-      <Col>{children}</Col>
+      <Col>
+      <div>
+      {header}
+      {children}
+      </div>
+      </Col>
       <Col></Col>
     </Row>
   </Container>
